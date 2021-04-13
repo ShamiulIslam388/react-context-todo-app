@@ -1,10 +1,15 @@
 import "./styles.css";
+import Nav from './Nav';
+import TodoList from './TodoList'
+import TodoForm from './TodoForm'
+import {TodoProvider} from './contexts/TodoContext'
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <TodoProvider className="App">
+      <Nav/>
+      <TodoList/>
+      <TodoForm/>
+    </TodoProvider>
   );
 }
