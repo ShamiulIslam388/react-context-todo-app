@@ -10,7 +10,10 @@ const TodoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTodos([...todos, { title }]);
+    if (title) {
+      setTodos([...todos, { title }]);
+    }
+
     setTitle("");
   };
   return (

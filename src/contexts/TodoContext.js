@@ -1,4 +1,4 @@
-import React,{createContext} from 'react';
+import React,{createContext,useState} from 'react';
 
 export const TodoContext = createContext();
 
@@ -12,5 +12,15 @@ export const TodoProvider = (props) => {
     <TodoContext.Provider value={[todos,setTodos]}>
       {props.children}
     </TodoContext.Provider>
+  )
+}
+
+export const CounterContext = createContext();
+export const CounterProvider=(props)=>{
+  const [count,setCount]=useState(0)
+  return(
+    <CounterContext.Provider value={{count,setCount}}>
+      {props.children}
+    </CounterContext.Provider>
   )
 }

@@ -17,3 +17,8 @@
   padding: 20px 30px;
   text-align: center;
 }
+
+.white-bold {
+  color: #fff;
+  font-size: 30px;
+}
